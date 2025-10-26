@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ title or "Smart Light Dashboard" }}</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2 class="logo">💡 SmartLight</h2>
+      <nav>
+        <a href="/lightcontrol">Light Control</a>
+        <a href="/schedule">Schedule</a>
+        <a href="#">Settings</a>
+      </nav>
+    </aside>
+
+    <!-- Main -->
+    <div class="main">
+      <!-- Topbar -->
+      <header class="topbar">
+        <h1>{{ title or "Dashboard" }}</h1>
+      </header>
+
+      <!-- Content -->
+      <main class="content">
+        {% block content %}{% endblock %}
+      </main>
+    </div>
+  </div>
+</body>
+</html>
